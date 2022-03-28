@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: cadetblue;
+            width: 49%;
+            height: 200px;
+            padding: 100px;          /*no space left so the next para will shift in bottom of this*/
+            box-sizing: border-box; /*this will adjust the content within and the next para will be inline , will not get in bottom*/
+        }
+        .col{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Box Model</h1>
+    <div class="col">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto, repellendus aperiam. Pariatur soluta rerum, optio illo fugiat reprehenderit? Fuga quae, ab accusamus rem officiis saepe distinctio! Facere, numquam! Voluptatem, architecto.
+    </div>
+    <div class="col">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto, repellendus aperiam. Pariatur soluta rerum, optio illo fugiat reprehenderit? Fuga quae, ab accusamus rem officiis saepe distinctio! Facere, numquam! Voluptatem, architecto.
+    </div>
+</body>
+</html>

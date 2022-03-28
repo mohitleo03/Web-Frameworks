@@ -1,0 +1,17 @@
+button{
+    width:100px;
+    height:100px;
+    background-color: azure;
+}
+input{
+    height: 20px;
+}
+img{
+    height: 100px;
+}
+#parent{
+    display: inline;
+}
+.abc{
+    display:inline;
+}

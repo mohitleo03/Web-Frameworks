@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        function display(s){
+            document.getElementById("demo").innerHTML=s;
+        }
+        let p=new Promise(function(resolve,reject){
+            let x=2;
+            if(x==1)
+            {
+                resolve("code is successful");
+            }
+            else
+            {
+                reject("error");
+            }
+        })
+        p.then(function (value){
+            display(value);
+        },
+        function (error){
+            display(error);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+i {
+    cursor: pointer;
+}
+.hide {
+    display: none;
+}
+.form-group{
+    font-size: 30px;
+}
+body{
+    background-color: rgb(162, 255, 255);
+    font-family: 'Andada Pro', serif;
+}
+table{
+    background-color: white;
+}

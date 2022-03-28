@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+    <style>
+        h1{
+            height: 120px;
+            text-align: right;
+            padding:  10px 50px 10px 0px;
+            font-size: 80px;
+            background-color: rgb(57, 124, 168);
+            color: white;
+        }
+        #dropdownMenuLink{
+            margin: 30px 0px 0px 40px;
+        }
+        table{
+            height: 60px;
+            width: 900px;
+            margin: 40px 0px 0px 300px;
+        }
+        th,td{
+            border: 2px solid black;
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Weather Report</h1>
+    <br>
+    <br>
+    <input type="text" name="" id="txt" placeholder="enter city name">
+    <button onclick="weather()">search</button>  
+    <script>
+      function weather(){
+        document.getElementById("txt").innerHTML="txt";
+      }
+    </script>
+      <table>
+          <th>
+            Temprature
+          </th>
+          <th>
+            Humidity
+          </th>
+          <th>
+            Feels like
+          </th>
+          <th>
+            Pressure
+          </th>
+          <th>
+            Visibility
+          </th>
+          <th>
+            Clouds
+          </th>
+      </table>
+      <script src="/JAVA_SCRIPT/weatherjs.js"></script>
+</body>
+</html>

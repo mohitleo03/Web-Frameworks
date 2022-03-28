@@ -1,0 +1,16 @@
+h2{
+    background-color: rgb(3, 190, 128);
+    color: rgb(255, 0, 0);
+}
+#para{
+    color: chocolate;
+}
+div>p{
+    color: blue;
+}
+div+p
+{
+    color:chartreuse;
+}
+
+

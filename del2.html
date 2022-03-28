@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    enter number of column<input type="text" id="c">
+    enter number of rows <input type="text" id="r">
+    <table id="id1">
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <button onclick="fun()">Get Answer</button>
+    <script>
+         function fun() {
+            r=document.getElementById('r').value;
+            c=document.getElementById('c').value;
+            for(let i=r;i>0;i--){
+                for(let j=c;j>0;j--)
+                {
+                    var table = document.getElementById("id1");
+                    var row = table.insertRow(1);
+                    var cell1 = row.insertCell(0);
+                    var cell2 = row.insertCell(1);
+                    if(j==1)
+                    cell1.innerHTML = i*j;
+                    else
+                    cell2.innerHTML=i*j;
+                }
+            }
+            
+        }
+    </script>
+</body>
+</html>

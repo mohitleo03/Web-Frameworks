@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/JAVA_SCRIPT/xy.js"></script>
+    <title>Calculator</title>
+</head>
+
+<body>
+    <form action="" name="form1">
+        x <input type="text" name="x">
+        y <input type="text" name="y">
+        <button type="button" onclick="show()">Solve</button>
+        Result <input type="text" name="ans">
+        <br><br>
+        <input type="radio" id="x-y" name="power" value="x-y" style="margin-left: 70px;" onclick="calcx()">
+          <label for="x-y">x<sup>y</sup></label>
+        <input type="radio" id="y-x" name="power" value="y-x" style="margin-left: 160px;" onclick="calcy()">
+          <label for="y-x">y<sup>x</sup></label>
+    </form>
+</body>
+
+</html>

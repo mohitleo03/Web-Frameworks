@@ -1,0 +1,48 @@
+.container{
+    height: 500px;
+    width: 100%;
+    border: 2px solid black;
+    display: flex;
+    /*flex property for flex box*/
+    /*flex-direction: row;*/                /*direction of flex is by default row*/
+    /*flex-direction: column;            /*we can set it to column*/
+    /*flex-direction: row-reverse;*/        /*it will start filling the items from end in row */
+    /*flex-direction: column-reverse;*/     /*it will start filling the items from end in column*/
+    /*flex-wrap: wrap;                        /*it helps in making layout responsive, the flex items will not get outside from the box in case window is resized*/
+    /*flex-wrap: wrap-reverse;*/            /*it wraps in reverse order*/
+    /*flex-flow: row wrap;                    /* it is combined of direction and wrap*/
+    /*Horizontal alignment of items*/
+    /*justify-content: center;                /*move the content/items to center*/ 
+    /*justify-content: space-between;         /*space between items is equal*/
+    /*justify-content: space-evenly;          /*space between items is equal including corners*/
+    /*justify-content: space-around;          /*remaining space on the left,right is equally divided to each item*/
+    /*Vertical alignment of items*/
+    /*align-items: center;                    /*move the content/items to center*/
+    /*align-items: flex-start;                  /*items will moved towards top it is by default*/
+    /*align-items: flex-end;                  /*items will moved towards bottom*/
+    /*align-items: stretch;                   /*when window size is changed it will adjust the space between items*/
+}
+.item{
+    height: 200px;
+    width: 200px;
+    background-color: tomato;
+    border: 2px solid green;
+    margin: 10px;
+    padding: 3px;
+}
+/*flex property for specific item*/
+#item-1{
+    /*order: 1;                               /*it will move this item to order 2,if other items are not assigned with any order then this will be considered as maximum order*/
+    /*flex-grow: 2;                           /*this item will have this ratio of area of total area*/
+    /*flex-shrink: 3;                         /*this will reduce more area of item when the whole area is reduced(window resized)*/
+    flex-basis: 160px;                        /*if flex direction is row flex basis will control witdh , in flex direction column it will controll height*/
+}
+#item-2{
+    /*order: 3;                               /*higher the order later it shows in container*/
+}
+#item-3{
+    /*flex: 2 2 300px;                         /*combination flex : order grow basis */
+    align-self: flex-start;                    /*moves the item to starting (reltive to its initial position in order of html tags)*/
+    align-self: center;                        /*moves the item to center (reltive to its initial position in order of html tags)*/
+    align-self: flex-end;                      /*moves the item to ending (relative to its initial position in order of html tags)*/
+}

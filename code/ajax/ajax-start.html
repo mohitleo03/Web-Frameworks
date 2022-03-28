@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var verseChoose = document.querySelector('select');
+        var poemDisplay = document.querySelector('pre');
+        //console.log(verseChoose[verseChoose.selectedIndex].value);
+        verseChoose.onchange = function() {
+            var verse = verseChoose.value;
+            updateDisplay(verse);
+        };
+        function updateDisplay(verse) {
+                var url = varse+'.txt';
+                var request = new XMLHttpRequest();
+                request.open('GET', url);
+                request.responseType = 'text';
+                request.onload = function() {
+                    poemDisplay.textContent = request.response;
+                };
+                request.send();
+        };
+        updateDisplay('ver1');
+        verseChoose[0].value = 'ver1';
+    </script>
+</head>
+<body>
+    <select name="abc" id="select">
+        <option value="ver1">Ver 1</option>
+        <option value="ver2">Ver 2</option>
+        <option value="ver3">Ver 3</option>
+        <option value="ver4">Ver 4</option>
+    </select>
+    <textarea name="ta" id="pre" cols="30" rows="10"></textarea>
+</body>
+</html>

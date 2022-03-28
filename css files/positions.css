@@ -1,0 +1,58 @@
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.clear::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.W-100{
+    width: 100%;
+}
+ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+body{
+    margin: 0px;
+   
+}
+.container{
+    width: 1200px;
+    margin:0px auto;
+}
+#header{
+    background-color: cadetblue;
+    text-align: center;
+    padding: 5px 0px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0px;   /*0px from top otherwise it will have some space from top*/
+    left: 0px;
+}
+#content{
+    margin-top: 110px;
+}
+#sidebar_1{
+    width: 20%;
+}
+#main{
+    width: 45%;
+}
+.image{
+    position: relative;
+}
+.icon{
+    position: absolute;
+    width: 10%;
+    top: 45%;
+    left: 45%;
+}
+#sidebar_2{
+    width: 25%;
+}

@@ -1,0 +1,41 @@
+.container{
+    height: 300px;
+    width: 100%;
+    border: 2px solid red;
+    display: flex;
+    /*flex-direction: column;*/ /*bydefault its row*/
+    /*flex-wrap: wrap;*/
+    flex-flow: row wrap; /*do btoh functionality direction and wrap*/
+    justify-content: space-evenly; /*position of content*/
+    align-items: center;/*item position*/
+     }
+.item{
+    background-color: seagreen;
+    border: 2px solid black;
+    margin: 2px;
+    padding: 3px; 
+}
+#item-1{
+    order: 2; /*can define numbering in grp but have to assign order to each item*/
+    flex-grow: 1;/*increse or decrease the size of item again assign to each item*/
+}
+#item-2{
+    order: 1;
+    flex-grow: 1;
+}  
+#item-3{
+    order: 3;
+    flex-grow: 1;
+}  
+#item-4{
+    order: 4;
+    flex-grow: 1;
+}  
+#item-5{
+    order: 5;
+    flex-grow: 1;
+}  
+#item-6{
+    order: 6;
+    flex-grow: 2;
+}       

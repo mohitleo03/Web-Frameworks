@@ -1,0 +1,1 @@
+export let my_name="Mohit Malik";

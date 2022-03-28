@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+        outline: 1px solid red;
+      }
+      
+      .container {
+        width: 200px;
+        height: 30px;
+        margin: 10px 0px;
+      }
+      
+      .cube {
+        width: 30px;
+        height: 30px;
+        background-color: red;
+        margin: 10px 0px;
+      }
+      /*If the cube is directly inside the container:*/
+      #container1:hover > #cube1 { background-color: yellow; }
+      /* If cube is next to (after containers closing tag) the container: */
+      #container2:hover + #cube2 { background-color: yellow; }
+      /* If the cube is somewhere inside the container: */
+      #container3:hover #cube3 { background-color: yellow; }
+      /* If the cube is a sibling of the container: */
+      #container4:hover ~ #cube4 { background-color: yellow; }
+    </style>
+</head>
+<body>
+  cube is directly inside the container:
+  <br>
+    <div class="container" id="container1">
+        <div class="cube" id="cube1">
+        </div>
+    </div>
+    <hr>
+    cube is next to (after containers closing tag) the container:
+    <br>
+    <div class="container" id="container2"></div>
+    <div class="cube" id="cube2"></div>
+    <hr>
+    cube is somewhere inside the container:
+    <div class="container" id="container3">
+      <div class="cube"></div>
+      <div class="cube" id="cube3">
+      </div>
+    </div>
+    <br>
+    <br>
+    <hr>
+    <div>
+      <div class="container" id="container4"></div>
+      <div class="cube" id="cube4"></div>
+    </div>
+</body>
+</html>

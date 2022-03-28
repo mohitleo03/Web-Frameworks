@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <p>this is paragraph 1</p>
+    <div id="id1">
+    <button onclick="fun()">
+        add more
+    </button>
+    </div>
+    <script>
+        function fun()
+        {
+        var p= document.createElement("p");
+        p.innerHTML="this is paragraph 2";
+        document.getElementById("id1").appendChild(p);
+        var p2
+        }
+    </script>
+</body>
+</html>

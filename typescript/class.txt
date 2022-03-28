@@ -1,0 +1,365 @@
+function add(p:product):void {
+    var prompt1 = require('prompt-sync')();
+    console.log("enter Product id, product name, product price, product date ");
+    var pid=parseInt(prompt1());
+    var pname=prompt1();
+    var price=parseInt(prompt1());
+    var pdate=parseInt(prompt1());
+    this.setid(pid);
+    this.setname(pname);
+    this.setprice(price);
+    this.setdate(pdate);
+}
+function view(p:product){
+    var pid=this.getid();
+    var pname=this.getname();
+    var price=this.getprice();
+    var pdate=this.getdate();
+    console.log("product id is ",pid);
+    console.log("product name is ",pname);
+    console.log("product price is ",price);
+    console.log("product date is ",pdate);
+}
+function setid(id:number,p:product):void{
+    p.pid=id;
+}
+function getid(p:product):number{
+    return p.pid;
+}
+function setname(name:string):void{
+    this.pname=name;
+}
+function getname():string{
+    return this.pname;
+}
+function setprice(price:number):void{
+    this.price=price;
+}
+function getprice():number{
+    return this.price;
+}
+function setdate(date:number):void{
+    this.pdate=date;
+}
+function getdate():number{
+    return this.pdate;
+} 
+
+
+
+const prompt =require('prompt-sync')();
+const readline = require('readline').createInterface({
+
+    input: process.stdin,
+  
+    output: process.stdout
+  
+  });
+class  product{
+    pid:number;
+    pname:string;
+    pprice:number;
+    pdate:number;
+    constructor(pid:number,pname:string,price:number,pdate:number){
+        pid=-1;
+        pname=null;
+        price=-1;
+        pdate=0;
+        console.log("object craeted with default values");
+    }
+    set id(id:number){
+        this.pid=id;
+    }
+    get id():number{
+        console.log("successful");
+        return this.pid;
+    }
+    set name(name:string){
+        this.pname=name;
+    }
+    get name():string{
+        return this.pname;
+    }
+    set price(price:number){
+        this.pprice=price;
+    }
+    get price():number{
+        return this.pprice;
+    }
+    set date(date:number){
+        this.pdate=date;
+    }
+    get date():number{
+        return this.pdate;
+    } 
+    
+    /*view(){
+        var pid=this.getid();
+        var pname=this.getname();
+        var price=this.getprice();
+        var pdate=this.getdate();
+        console.log("product id is ",pid);
+        console.log("product name is ",pname);
+        console.log("product price is ",price);
+        console.log("product date is ",pdate);
+    }*/
+}
+function add(p:product,n:number):void{
+    console.log(n);
+    readline.question("enter Product id, product name, product price, product date ",
+    pid=>{
+        p.id = pid;
+        console.log(pid);
+    },
+    pname=>{
+        p.pname=pname;
+    },
+    price=>{
+        p.price=price;
+    },
+    pdate=>{
+        p.pdate=pdate;
+        readline.close();
+    });
+}
+function view(p[]:product,n:number):void {
+    for(let i = 0;i<n;i++){
+        console.log("#",i+1," product details are");
+        console.log("product id is ",p[i].id);
+        console.log("product name is ",p[i].name);
+        console.log("product price is ",p[i].price);
+        console.log("product date is ",p[i].pdate);
+    }
+}
+function main():void{
+    // var p = new product();
+    var product : p[] = [];
+    var prompt = require('prompt-sync')();
+    console.log("how many objects you want to add?");
+    var n=prompt();
+    console.log(n);
+    for(let i = 0;i<n;i++)
+    add(p[i],n);
+    view(p[],n);
+    console.log("if you want to add press 1 \n if you want to delete press 2");
+    var c = 
+}
+main();
+
+
+
+
+
+
+const readline = require('readline');
+class  product{
+    pid:number;
+    pname:string;
+    pprice:number;
+    pdate:number;
+    constructor(){
+        this.pid=-1;
+        this.pname=null;
+        this.price=-1;
+        this.pdate=0;
+    }
+    set id(id:number){
+        console.log("successful");
+        this.pid=id;
+    }
+    get id():number{
+        return this.pid;
+    }
+    set name(name:string){
+        this.pname=name;
+    }
+    get name():string{
+        return this.pname;
+    }
+    set price(price:number){
+        this.pprice=price;
+    }
+    get price():number{
+        return this.pprice;
+    }
+    set date(date:number){
+        this.pdate=date;
+    }
+    get date():number{
+        return this.pdate;
+    } 
+}
+function add(p:product):void{
+    const prompt =require('prompt-sync')();
+    readline.question("enter Product id, product name, product price, product date ",
+    pid=>{
+        p.id = pid;
+        console.log(pid);
+    },
+    pname=>{
+        p.pname=pname;
+    },
+    price=>{
+        p.price=price;
+    },
+    pdate=>{
+        p.pdate=pdate;
+        readline.close();
+    });
+}
+function view(p:product):void {
+        console.log("\n");
+        console.log("product id is ",p.id);
+        console.log("product name is ",p.name);
+        console.log("product price is ",p.price);
+        console.log("product date is ",p.pdate);
+}
+function main():void{
+    // var p = new product();
+    let p:product;
+    let p1:product;
+    let p2:product;
+    let p3:product;
+    let p4:product;
+    let p5:product;
+    let p6:product;
+    let p7:product;
+    let p8:product;
+    let p9:product;
+    var prompt = require('prompt-sync')();
+    console.log("how many objects you want to add?");
+    var n=prompt();
+    switch(n){
+        case 1 :{
+            console.log("add #1 product");
+            add(p);
+        }
+        case 2 :{
+            console.log("add #1 product");
+            add(p);
+            console.log("add #2 product");
+            add(p1);
+        }
+        case 3 :{
+            console.log("add #1 product");
+            add(p);
+            console.log("add #2 product");
+            add(p1);
+            console.log("add #3 product");
+            add(p2);
+        }
+        case 4 :{
+            console.log("add #1 product");
+            add(p);
+            console.log("add #2 product");
+            add(p1);
+            console.log("add #3 product");
+            add(p2);
+            console.log("add #4 product");
+            add(p3);
+        }
+        case 5 :{
+            console.log("add #1 product");
+            add(p);
+            console.log("add #2 product");
+            add(p1);
+            console.log("add #3 product");
+            add(p2);
+            console.log("add #4 product");
+            add(p3);
+            console.log("add #5 product");
+            add(p4);
+        }
+        case 6 :{
+            console.log("add #1 product");
+            add(p);
+            console.log("add #2 product");
+            add(p1);
+            console.log("add #3 product");
+            add(p2);
+            console.log("add #4 product");
+            add(p3);
+            console.log("add #5 product");
+            add(p4);
+            console.log("add #6 product");
+            add(p5);
+        }
+        case 7 :{
+            console.log("add #1 product");
+            add(p);
+            console.log("add #2 product");
+            add(p1);
+            console.log("add #3 product");
+            add(p2);
+            console.log("add #4 product");
+            add(p3);
+            console.log("add #5 product");
+            add(p4);
+            console.log("add #6 product");
+            add(p5);
+            console.log("add #7 product");
+            add(p6);
+        }
+        case 8 :{
+            console.log("add #1 product");
+            add(p);
+            console.log("add #2 product");
+            add(p1);
+            console.log("add #3 product");
+            add(p2);
+            console.log("add #4 product");
+            add(p3);
+            console.log("add #5 product");
+            add(p4);
+            console.log("add #6 product");
+            add(p5);
+            console.log("add #7 product");
+            add(p6);
+            console.log("add #8 product");
+            add(p7);
+        }
+        case 9 :{
+            console.log("add #1 product");
+            add(p);
+            console.log("add #2 product");
+            add(p1);
+            console.log("add #3 product");
+            add(p2);
+            console.log("add #4 product");
+            add(p3);
+            console.log("add #5 product");
+            add(p4);
+            console.log("add #6 product");
+            add(p5);
+            console.log("add #7 product");
+            add(p6);
+            console.log("add #8 product");
+            add(p7);
+            console.log("add #9 product");
+            add(p8);
+        }
+        case 10 :{
+            console.log("add #1 product");
+            add(p);
+            console.log("add #2 product");
+            add(p1);
+            console.log("add #3 product");
+            add(p2);
+            console.log("add #4 product");
+            add(p3);
+            console.log("add #5 product");
+            add(p4);
+            console.log("add #6 product");
+            add(p5);
+            console.log("add #7 product");
+            add(p6);
+            console.log("add #8 product");
+            add(p7);
+            console.log("add #9 product");
+            add(p8);
+            console.log("add #10 product");
+            add(p9);
+        }
+    }
+}
+main();

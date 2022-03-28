@@ -1,0 +1,45 @@
+.container{
+    background-color: red;
+    height: 700px;
+    display: grid;
+    /*grid-template-rows: 133px 133px 133px;              /*there will be 3 rows, items of 133px*/
+    /*grid-template-columns: 133px 133px;                 /*there will be 2 columns, items of 133px ,extra items will be shown in next row*/
+    grid-template-rows: 60px 1fr 60px;                      /*this will show 3 rows 1 row having 60px one with 60px and rest height given to remaining row*/
+    grid-template-columns: repeat(3 ,1fr);                  /*this will show 3 column equally gapped between each other utilizing all height repeat is just repeating fr 3 timesrest height will be divided into 3 fractions(fr) */
+    row-gap: 12px;                                          /*gap between each row is 12 px */
+    column-gap: 12px;                                       /*gap between each column is 12 px */
+    /*use justify for aligning items horizontally*/
+    justify-items: start;                                   /*all items will be shown from the starting to its relative position*/
+    justify-items: center;                                  /*all items will be shown from the center to its relative position*/
+    /*use justify for aligning items vertically*/
+    align-items: center;
+    place-items: center;                                    /*combined justify,align*/
+}
+.item{
+    background-color: aqua;
+    /*if we will not give width or hieght the grid container will be fully occupied height equally
+     divided into number of rows, and width is divided into no. of columns*/
+    height: 122px;
+    width: 122px;
+}
+.item-1{
+    /*grid-column-start: 1;                       /*this item will start from column 1 */
+    /*grid-column-end: 4;                         /*this item will end at column 4*/
+    grid-column: 1 / span 3;                      /*this item starts from first column and span upto 3 columns*/
+    color: white;
+    background-color: black;
+    width: 100vw;   /*to give full width*/
+}
+.item-2{
+    /*justify-self: end;                              /*will show this itemin the end to its reltive position horizontally*/
+    /*align-self: end;                                /*will show this itemin the end to its reltive position vertically*/
+    place-self: end;                                    /*conbined justify , align*/
+
+}
+.footer{
+    grid-column-start: 1; 
+    grid-column-end: 4;
+    color: white;
+    background-color: black;
+    width: 100vw;
+}
